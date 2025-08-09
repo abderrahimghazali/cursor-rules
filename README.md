@@ -1,6 +1,6 @@
 # Cursor AI Project Rules for Web Development
 
-[![Cursor Rules CI](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/ci.yml/badge.svg)](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/test.yml)
+[![Cursor Rules CI](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/test.yml/badge.svg)](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/test.yml)
 
 ## 📌 About This Repository
 This repository contains a **set of Cursor AI rules** specifically designed to **enhance efficiency, enforce coding standards, and automate best practices** for **web developers**, particularly those working with **PHP, Drupal, JavaScript, and frontend frameworks**.
