@@ -1,0 +1,33 @@
+---
+description: JavaScript Performance Optimization
+globs: *.js, *.ts
+---
+# JavaScript Performance Optimization
+
+<rule>
+name: javascript_performance_optimization
+description: Enforce best practices for optimizing JavaScript performance.
+
+actions:
+  - type: enforce
+    conditions:
+      - pattern: "\\buseState\\(([^)]*)\\)"
+        message: "Avoid unnecessary state updates."
+
+      - pattern: "React\\.memo\\("
+        message: "Consider using React.memo() to optimize component re-renders."
+
+      - pattern: "\\b\\(\\)\\s*=>\\s*{"
+        message: "Avoid using anonymous functions in render methods."
+
+  - type: suggest
+    message: |
+      Performance tips:
+      - Use memoization for expensive calculations.
+      - Optimize FlatList with performance props.
+      - Minimize unnecessary re-renders.
+
+metadata:
+  priority: high
+  version: 1.0
+</rule>

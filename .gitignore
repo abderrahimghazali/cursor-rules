@@ -1,0 +1,4 @@
+.tests/temp
+.tests/reports
+settings.local.json
+.DS_Store
