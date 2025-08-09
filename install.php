@@ -329,10 +329,10 @@ function install_cursor_rules(array $options = []): bool {
       echo "⚠️ Interactive mode not available when using curl piping (STDIN is already in use).\n";
       echo "Defaulting to core rules installation.\n\n";
       echo "For interactive installation with prompts, use the two-step process instead:\n";
-      echo "1. curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php -o install.php\n";
+      echo "1. curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php -o install.php\n";
       echo "2. php install.php\n\n";
       echo "For specific options without interactive mode, use:\n";
-      echo "curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --help\n\n";
+      echo "curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --help\n\n";
       $rules_to_install = $core_rules;
     } else if ($options['all']) {
       $rules_to_install = array_merge($core_rules, $web_stack_rules, $python_rules, $javascript_rules);
@@ -422,7 +422,7 @@ function install_cursor_rules(array $options = []): bool {
   }
 
   // Try to download rules from GitHub if no local source is found
-  $github_source = 'https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/.cursor/rules/';
+  $github_source = 'https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/.cursor/rules/';
   $temp_dir = sys_get_temp_dir() . '/cursor-rules-' . uniqid();
 
   // Find a valid source directory
@@ -517,7 +517,7 @@ function install_cursor_rules(array $options = []): bool {
     }
 
     $download_success = true;
-    $github_source = 'https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/.cursor/rules/';
+    $github_source = 'https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/.cursor/rules/';
 
     // Download all rules that need to be installed
     if ($options['debug']) {
@@ -690,7 +690,7 @@ function install_cursor_rules(array $options = []): bool {
       }
     } else {
       // Try to download from GitHub
-      $github_ignore_base = 'https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/';
+      $github_ignore_base = 'https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/';
       $ignore_files = ['.cursorignore', '.cursorindexingignore'];
       $downloaded_ignore_count = 0;
       

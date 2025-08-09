@@ -1,6 +1,6 @@
 # Cursor AI Project Rules for Web Development
 
-[![Cursor Rules Tests](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/test.yml/badge.svg)](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/test.yml)
+[![Cursor Rules CI](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/ci.yml/badge.svg)](https://github.com/abderrahimghazali/cursor-rules/actions/workflows/ci.yml)
 
 ## 📌 About This Repository
 This repository contains a **set of Cursor AI rules** specifically designed to **enhance efficiency, enforce coding standards, and automate best practices** for **web developers**, particularly those working with **PHP, Drupal, JavaScript, and frontend frameworks**.
@@ -30,7 +30,7 @@ For a fully interactive installation with prompts:
 
 ```bash
 # Step 1: Download the installer
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php -o install.php
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php -o install.php
 
 # Step 2: Run the installer interactively
 php install.php
@@ -45,12 +45,12 @@ This two-step process ensures you get the interactive experience with:
 For a quick installation without prompts (installs core rules only):
 
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php
 ```
 
 or install rules by tag expression
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --tags "language:javascript category:security"
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --tags "language:javascript category:security"
 ```
 
 ⚠️ **Note**: When using the curl piping method above, interactive mode is **not possible** because STDIN is already being used for the script input. The installer will automatically default to installing core rules only.
@@ -60,13 +60,13 @@ curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/in
 To install with specific options and bypass the interactive mode:
 
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- [options]
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- [options]
 ```
 
 For example, to install all rules:
 
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --all
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --all
 ```
 
 ### Installation Options
@@ -117,24 +117,24 @@ Common issues:
 
 Install core rules only:
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --core
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --core
 ```
 
 Install web stack rules (includes core rules):
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --web-stack
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --web-stack
 # Or using the shorter alias
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --ws
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --ws
 ```
 
 Install all rules:
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --all
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --all
 ```
 
 Install to a custom directory:
 ```bash
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --all --destination=my/custom/path
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --all --destination=my/custom/path
 ```
 
 #### Tag-Based Selection
@@ -143,16 +143,16 @@ The installer now supports filtering rules by tags, allowing you to install only
 
 ```sh
 # Install all JavaScript security rules
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --tags "language:javascript category:security"
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --tags "language:javascript category:security"
 
 # Install all OWASP Top 10 rules for PHP
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --tags "language:php standard:owasp-top10"
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --tags "language:php standard:owasp-top10"
 
 # Install all React-related rules
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --tags "framework:react"
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --tags "framework:react"
 
 # Install rules matching multiple criteria with OR logic
-curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/main/install.php | php -- --tags "language:javascript OR language:php"
+curl -s https://raw.githubusercontent.com/abderrahimghazali/cursor-rules/master/install.php | php -- --tags "language:javascript OR language:php"
 ```
 
 Available tag presets:
